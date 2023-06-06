@@ -5,3 +5,7 @@ body {
 .App {
   text-align: center;
 }
+/* Estableciendo la anchura del buscador */
+.input-group {
+  width: 60%;
+}
