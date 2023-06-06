@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({newLocation}) => {
     const [city, setCity] = useState("")
     // Creando la funcion  del boton BUSCAR
     const onSubmit = (e) => {
         e.preventDefault();
         console.log({city});
         if (city==="" || !city) return;
+
+        newLocation(city);
     }
 
     return (
