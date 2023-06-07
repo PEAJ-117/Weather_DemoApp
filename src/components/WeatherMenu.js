@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Form from './Form';
+import ShowCard from "./ShowCard";
 
 const WeatherMenu = () => {
     let urlWeather = "https://api.openweathermap.org/data/2.5/weather?appid=aeba8de67ad34ce68712228904ccb3eb&lang=es";
@@ -52,6 +53,11 @@ const WeatherMenu = () => {
         <>
             <Form
                 newLocation = {getLocation}/>
+            <ShowCard
+                showData = {show}
+                loadingData = {loading}
+                weather = {weather}
+                forecast = {forecast}/>
         </>
     );
 }
